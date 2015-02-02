@@ -1,0 +1,362 @@
+
+@import 'common';
+body{
+  line-height:.2rem;
+  font-size:.14rem;
+  color:#333;
+  @include box();
+  @include css3(box-orient, vertical);
+  @include css3(transform-style, preserve-3d);
+  @include css3(perspective, 800px);
+  -webk-user-select:none;
+  &>section{
+    width:inherit;
+    height:inherit;
+    @include box();
+    @include css3(box-orient, vertical);
+    z-index:1;
+    &[data-transform]{
+      position:absolute;
+      background:#fff;
+      @include css3(transition, all ease-in-out .3s);
+      @include css3(transform, scale(.9));
+      z-index:999;
+    }
+    &[data-transform="up"] {
+      top:100%;
+      left:0;
+      &.show{
+        top:0;
+        @include css3(transform, scale(1));
+      }
+    }
+    &[data-transform="side"] {
+      left:100%;
+      top:0;
+      &.hide{
+        left:0;
+        @include css3(transform, scale(.9));
+      }
+    }
+    &>header{
+      width: inherit;
+      height: .46rem;
+      line-height: .46rem;
+      font-size: .22rem;
+      color:#fff;
+      text-align:center;
+      background: color(red);
+      @include css3(box-ordinal-group, 1);
+      a{
+        width: .46rem;
+        height: .46rem;
+      }
+      .back{
+        width: inherit;
+        height: inherit;
+        display:block;
+        background:url(../images/back.png) no-repeat center;
+        background-size: .36rem .36rem;
+      }
+    }
+    &>article{
+      height:inherit;
+      overflow-x:hidden;
+      overflow-y:scroll;
+      -webkit-overflow-scrolling:touch;
+      @include css3(box-flex, 1);
+      @include css3(box-ordinal-group, 2);
+      z-index:1;
+    }
+  }
+}
+/* ios 支付宝安全充值 */
+.recharge-main{
+  .input{
+    margin-top: .1rem;
+  }
+  section:first-child{
+    margin-top:15px;
+    input[type=submit]{
+      margin-top:.25rem;
+    }
+  }
+  section:nth-of-type(2) {
+    margin-top: .2rem;
+  }
+  .support-bank{
+    margin:.5rem 0 .1rem;
+    .btn{
+      width:100%;
+      color: color(blue);
+      border-color: color(blue);
+      &:active{
+        background-color: rgba(0,0,0,.1);
+        color:#fff;
+      }
+    }
+  }
+}
+/* 支付列表*/
+.quick-pay{
+  border-bottom:1px solid color(eee);
+  background-position-y:-1px;
+  &:nth-of-type(1){
+    border-bottom:none;
+  }
+  &>h2{
+    height: .3rem;
+    padding-left: .2rem;
+    line-height: .3rem;
+    font-size: .16rem;
+    color: color(c999);
+    background: color(f3f3f3);
+  }
+  &>ul{
+    li{
+      height: .5rem;
+      border-bottom:1px solid color(ccc);
+      position:relative;
+      .react{
+        @include box();
+      }
+      images{
+        margin-top: .05rem;
+      }
+      .b-description{
+        @include css3(box-flex, 1);
+        &>div{
+          h3{
+            padding: .06rem 0 .02rem;
+            display:inline-block;
+            font-size: .16rem;
+
+          }
+          &>span{
+            height: .2rem;
+            display:inline-block;
+            position:relative;
+          }
+          .top{
+            height: .2rem;
+            padding:0 .08rem 0 .04rem;
+            line-height: .21rem;
+            color:#fff;
+            font-size: .08rem;
+            white-space:nowrap;
+            position:absolute;
+            left: 4px;
+            top: 4px;
+            background:url(../images/bank/top.png);
+            background-size: 100% .2rem;
+          }
+        }
+        &>p{
+          font-size: .12rem;
+          color: color(c666);
+        }
+      }
+      &:last-child{
+        border:none;
+      }
+    }
+  }
+}
+
+/* 常见问题*/
+.question-link{
+  border-top:1px solid color(eee);
+  border-bottom:1px solid color(eee);
+  margin: .16rem 0 .16rem;
+  a{
+    height: .5rem;
+    padding-left:.74rem;
+    line-height: .5rem;
+    display:block;
+    background:url(../images/bank/question.png) no-repeat left center;
+    background-size:75px 40px;
+    font-size: .2rem;
+  }
+}
+
+/* 投注确认支付 */
+.pay-main{
+  padding: .2rem;
+  div:first-child{
+    line-height: .26rem;
+    font-size: .18rem;
+  }
+  .sub-btns{
+    padding-top: .6rem;
+    overflow:hidden;
+    .btn-r{
+      float:left;
+    }
+    .btn-cancel{
+      float:right;
+    }
+  }
+}
+/* 连连支付 */
+.llzf-bind{
+  padding-top: .15rem;
+  .input{
+    margin-top: .1rem;
+  }
+  .btn-confirm{
+    margin-top: .2rem;
+  }
+}
+/* 手机充值 */
+.sj-recharge{
+  @extend .llzf-bind;
+  &~section{
+    margin-top: .15rem;
+  }
+}
+/* 银行列表 */
+.icon-check{
+  width:18px;
+  height:18px;
+  margin-right:4px;
+  display:inline-block;
+  vertical-align: top;
+  background:url(../images/check.png) no-repeat;
+  background-size:18px 18px;
+}
+.icon-check-s{
+  @extend .icon-check;
+  background:url(../images/check-s.png) no-repeat;
+  background-size:18px 18px;
+}
+.bank-cont{
+  background:#fff;
+  h2{
+    height:40px;
+    padding-left:10px;
+    line-height:40px;
+    font-size:.16rem;
+    color:#00afe3;
+    background:#b8b8b8;
+  }
+}
+.bank-list{
+  &>li{
+    height:70px;
+    border-bottom:1px solid color(eee);
+    @include box();
+    @include css3(box-align, center);
+    .b-tit{
+      padding-left:0.1rem;
+      font-size:.2rem;
+
+    }
+    .b-show{
+      padding-right:.1rem;
+      @include css3(box-flex, 1);
+    }
+    .b-kind{
+      float:right;
+      li{
+        float:left;
+        margin:0 6px;
+        color:#00afe3;
+      }
+    }
+    .custom-tele{
+      padding-top:10px;
+      clear:both;
+      float:right;
+      color: color(red);
+    }
+  }
+}
+
+/* 充值提示 b*/
+.recharge-tips{
+  padding:0 .1rem;
+  &>div{
+    height: 3rem;
+    background:url(../images/recharge/right.png) no-repeat center;
+
+  }
+}
+.recharge-layer{
+  width:100%;
+  height:100%;
+  border:none;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index: 99999999;
+}
+/* 充值提示 e*/
+/* 大额转账 b*/
+.transfer-details {
+  padding: .1rem;
+  &~section{
+    padding: .1rem;
+  }
+}
+.transfer-details dl {
+  @include box();
+  height: .32rem;
+  margin: .1rem 0 0;
+  line-height: .32rem;
+  font-size: .16rem;
+  overflow: hidden;
+}
+.transfer-details dl dd {
+  @include box();
+}
+
+.matters {
+  margin-bottom: .5rem;
+  line-height: .2rem;
+  font-size: .14rem;
+}
+.matters dd{
+  color:#999;
+  font-size: .12rem;
+}
+/* 大额转账 e*/
+/* 常见问题 b*/
+.question-main {
+  margin-bottom: .2rem;
+  line-height: .2rem;
+}
+.question-main > dl {
+  padding: .1rem;
+}
+.question-main > dl > dt {
+  padding: .06rem 0 .04rem;
+  font-weight: bold;
+}
+.question-main .q-list li {
+  height: .5rem;
+  border-bottom: 1px solid #eee;
+  line-height: .5rem;
+}
+.question-main .q-list li a {
+  padding: 0 .1rem 0 .2rem;
+  height: 100%;
+  font-size: .18rem;
+  display: block;
+}
+.question-main .q-list li a > span {
+  width: 100%;
+  display: block;
+  background: url(../images/more.png) no-repeat right center;
+  background-size: .32rem .32rem;
+}
+/* 常见问题 */
+/* 注册 b*/
+.activity-register{
+  padding: .25rem 6%;
+  .input{
+    margin-top: .15rem;
+  }
+
+}
+
+/* 注册 e*/

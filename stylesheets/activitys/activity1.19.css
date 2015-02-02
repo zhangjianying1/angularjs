@@ -1,0 +1,566 @@
+/* line 4, ../../sass/activitys/base.scss */
+html {
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 625%;
+}
+@media screen and (min-width: 640px) {
+  /* line 4, ../../sass/activitys/base.scss */
+  html {
+    font-size: 1200%;
+  }
+}
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+  /* line 4, ../../sass/activitys/base.scss */
+  html {
+    font-size: 900%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 4, ../../sass/activitys/base.scss */
+  html {
+    font-size: 625%;
+  }
+}
+
+/* line 20, ../../sass/activitys/base.scss */
+body {
+  font-family: Microsoft YaHei, "微软雅黑", Verdana, Geneva, sans-serif;
+  margin: 0;
+  font-size: .14rem;
+  line-height: 1.5;
+  color: #333333;
+  width: 100%;
+}
+
+/* line 29, ../../sass/activitys/base.scss */
+li {
+  list-style: none;
+}
+
+/* line 30, ../../sass/activitys/base.scss */
+h1, h2, h3, h4, h5, h6, div, p, dl, dd, dt, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* line 32, ../../sass/activitys/base.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 35, ../../sass/activitys/base.scss */
+em, strong, b, i {
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 36, ../../sass/activitys/base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 39, ../../sass/activitys/base.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 43, ../../sass/activitys/base.scss */
+img {
+  vertical-align: middle;
+  border: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 49, ../../sass/activitys/base.scss */
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #333;
+}
+
+/* line 55, ../../sass/activitys/base.scss */
+input {
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 0;
+}
+/* line 57, ../../sass/activitys/base.scss */
+input:focus {
+  outline: none;
+}
+/* line 60, ../../sass/activitys/base.scss */
+input:active {
+  outline: none;
+}
+
+/* line 69, ../../sass/activitys/base.scss */
+input[type=number] {
+  -webkit-appearance: none;
+}
+/* line 70, ../../sass/activitys/base.scss */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* line 73, ../../sass/activitys/base.scss */
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* line 79, ../../sass/activitys/base.scss */
+.hide {
+  display: none;
+}
+
+/* line 82, ../../sass/activitys/base.scss */
+.indent {
+  text-indent: 2em;
+}
+
+/* line 86, ../../sass/activitys/base.scss */
+.loading {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.2), 7px 7px 0 0 rgba(0, 0, 0, 0.3), 0 10px 0 0 rgba(0, 0, 0, 0.4), -7px 7px 0 0 rgba(0, 0, 0, 0.5), -10px 0px 0 0 rgba(0, 0, 0, 0.6), -7px -7px 0 0 rgba(0, 0, 0, 0.7), 0 -10px 0 0 rgba(0, 0, 0, 0.8), 7px -7px 0 0 rgba(0, 0, 0, 0.9);
+  -webkit-animation-name: loading;
+  -moz-animation-name: loading;
+  -ms-animation-name: loading;
+  -o-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 错误提示层 */
+/* line 125, ../../sass/activitys/base.scss */
+.error-layer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: -.6rem;
+  left: 0;
+  z-index: 99999999;
+  opacity: 0;
+  -webkit-transition: all ease-out 0.1s;
+  -moz-transition: all ease-out 0.1s;
+  -ms-transition: all ease-out 0.1s;
+  -o-transition: all ease-out 0.1s;
+  transition: all ease-out 0.1s;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+}
+/* line 135, ../../sass/activitys/base.scss */
+.error-layer.show {
+  bottom: 20%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* line 140, ../../sass/activitys/base.scss */
+.error-layer span {
+  min-height: .4rem;
+  min-width: .8rem;
+  padding: 0 .2rem;
+  line-height: .4rem;
+  font-size: .16rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* confirm layer */
+/* line 154, ../../sass/activitys/base.scss */
+span.accept {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(top, #ec4e31, #d03c25);
+  background-image: linear-gradient(top, #ec4e31, #d03c25);
+}
+/* line 163, ../../sass/activitys/base.scss */
+span.accept a {
+  width: 100%;
+  display: block;
+  color: #fff;
+}
+
+/* line 169, ../../sass/activitys/base.scss */
+span.accept:active {
+  background-image: -webkit-linear-gradient(top, #d03c25, #ec4e31);
+  background-image: linear-gradient(top, #d03c25, #ec4e31);
+}
+
+/* line 173, ../../sass/activitys/base.scss */
+span.cancel {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(top, #818181, #4b4b4b);
+  background-image: linear-gradient(top, #818181, #4b4b4b);
+}
+/* line 182, ../../sass/activitys/base.scss */
+span.cancel a {
+  width: 100%;
+  display: block;
+  color: #fff;
+}
+
+/* line 188, ../../sass/activitys/base.scss */
+span.cancel:active {
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, #4b4b4b, #818181);
+  background-image: linear-gradient(top, #4b4b4b, #818181);
+}
+
+/* line 193, ../../sass/activitys/base.scss */
+#cLayer, #alert, #status, .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+/* line 208, ../../sass/activitys/base.scss */
+.mask > article {
+  width: 96%;
+  height: 2rem;
+  padding: .1rem .12rem;
+  border-radius: 8px;
+  background: #fbe796;
+  color: #4d2f05;
+  position: absolute;
+  top: .74rem;
+  left: 2%;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 225, ../../sass/activitys/base.scss */
+#cLayer .layer, #alert .alert, #status > section {
+  width: 300px;
+  height: 207px;
+  padding: 0 20px;
+  background: #fee767;
+  border-radius: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+/* line 237, ../../sass/activitys/base.scss */
+#cLayer .layer .point, #alert .alert .point {
+  width: 100px;
+  height: 40px;
+  line-height: 54px;
+  text-indent: 22px;
+  background: #e61b05;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 14px;
+  -webkit-transform: rotate(-34deg) translate(-10px, -27px);
+  transform: rotate(-34deg) translate(-10px, -27px);
+}
+
+/* line 252, ../../sass/activitys/base.scss */
+#cLayer .layer strong {
+  width: 100%;
+  height: 90px;
+  margin-top: 60px;
+  display: inline-block;
+  color: #b60e0e;
+  font-weight: normal;
+}
+
+/* line 260, ../../sass/activitys/base.scss */
+#alert .alert p {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  color: #b60e0e;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* line 273, ../../sass/activitys/base.scss */
+#cLayer .layer > div, #alert .alert > div {
+  width: 100%;
+  height: 68px;
+  overflow: hidden;
+}
+
+/* line 278, ../../sass/activitys/base.scss */
+#cLayer .layer > div span {
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* line 289, ../../sass/activitys/base.scss */
+#cLayer .layer > div span.accept {
+  float: right;
+}
+
+/* line 294, ../../sass/activitys/base.scss */
+#cLayer .layer > div span.cancel {
+  float: left;
+}
+
+/* line 298, ../../sass/activitys/base.scss */
+#alert .alert > div span {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(to bottom, #ec4e31, #d03c25);
+  background-image: linear-gradient(to bottom, #ec4e31, #d03c25);
+}
+
+/* line 311, ../../sass/activitys/base.scss */
+#alert .alert > div span:active {
+  background-image: -webkit-linear-gradient(to bottom, #d03c25, #b02a11);
+  background-image: linear-gradient(to bottom, #d03c25, #b02a11);
+}
+
+/* line 315, ../../sass/activitys/base.scss */
+#cLayer .layer > div a {
+  display: block;
+}
+
+/* line 2, ../../sass/activitys/activity1.19.scss */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 6, ../../sass/activitys/activity1.19.scss */
+body {
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: box;
+  background: #f9eacd;
+}
+
+/* line 13, ../../sass/activitys/activity1.19.scss */
+body > article {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 领取奖励 */
+/* line 23, ../../sass/activitys/activity1.19.scss */
+#layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* line 36, ../../sass/activitys/activity1.19.scss */
+#iosLayer {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  z-index: 9999;
+}
+/* line 47, ../../sass/activitys/activity1.19.scss */
+#iosLayer img {
+  width: 60%;
+}
+
+/* line 51, ../../sass/activitys/activity1.19.scss */
+.register {
+  width: 100%;
+  height: auto !important;
+  position: relative;
+}
+/* line 56, ../../sass/activitys/activity1.19.scss */
+.register .r-box {
+  width: 100%;
+  padding: 26% 20%  0 20%;
+  margin: 0 auto;
+  font-size: .14rem;
+  -webkit-transition: all ease-out 0.4s;
+  -moz-transition: all ease-out 0.4s;
+  -ms-transition: all ease-out 0.4s;
+  -o-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 66, ../../sass/activitys/activity1.19.scss */
+.register input {
+  width: 100%;
+  height: .34rem;
+  padding: 0 .08rem 0 .1rem;
+  line-height: .34rem;
+  border: none;
+  font-size: .14rem;
+  color: #fff;
+  background: #7a0317;
+  border-radius: .18rem;
+}
+/* line 76, ../../sass/activitys/activity1.19.scss */
+.register input::-webkit-input-placeholder {
+  color: #f8e86f;
+}
+/* line 81, ../../sass/activitys/activity1.19.scss */
+.register .tag-code {
+  margin-top: 10%;
+}
+/* line 84, ../../sass/activitys/activity1.19.scss */
+.register .tag-code input {
+  width: 50%;
+}
+/* line 87, ../../sass/activitys/activity1.19.scss */
+.register .tag-code .send-btn {
+  width: 29%;
+  height: .34rem;
+  margin-left: .06rem;
+  border-radius: .18rem;
+  line-height: .34rem;
+  text-align: center;
+  color: #7a0317;
+  font-size: .14rem;
+  background: #ffb712;
+  position: absolute;
+}
+/* line 98, ../../sass/activitys/activity1.19.scss */
+.register .tag-code .send-btn.disabled {
+  color: #ccc;
+}
+/* line 103, ../../sass/activitys/activity1.19.scss */
+.register .error-tips {
+  height: .2rem;
+  margin: 2% 0;
+  line-height: .2rem;
+  text-align: center;
+  color: #fae870;
+}
+/* line 110, ../../sass/activitys/activity1.19.scss */
+.register .sub-box {
+  text-align: center;
+}
+/* line 112, ../../sass/activitys/activity1.19.scss */
+.register .sub-box .sub-form {
+  width: 1.22rem;
+  height: .33rem;
+  line-height: .33rem;
+  text-align: center;
+  font-size: .16rem;
+  color: #ad3d33;
+  background: url(../../images/activitys/sub-btn.png);
+  background-size: cover;
+  font-family: Microsoft YaHei, "微软雅黑", Verdana, Geneva, sans-serif;
+}

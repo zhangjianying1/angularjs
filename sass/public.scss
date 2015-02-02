@@ -1,0 +1,104 @@
+
+$theme:(
+  red: #dd171b,
+  blue: #45e4a6,
+  c333: #333,
+  c666: #666,
+  c999: #999,
+  ccc: #ccc,
+  f3f3f3: #f3f3f3,
+  aaa: #aaa,
+  eee: #eee
+);
+@function color($key){
+  @if map-has-key($theme, $key){
+    @return map-get($theme, $key);
+  }
+  @warn "Unknow #{$key} in $theme.";
+  @return null;
+}
+@mixin box(){
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-box;
+  display:-o-box;
+  display:box;
+}
+@mixin boxflex($n){
+  -webkit-box-flex:$n;
+  -moz-box-flex:$n;
+  -ms-box-flex:$n;
+  -o-box-flex:$n;
+  box-flex:$n;
+}
+@mixin radius($value, $pos:false) {
+  @if $pos == false{
+    -webkit-border-radius: $value;
+    -moz-border-radius:$value;
+    -ms-border-radius: $value;
+    -o-border-radius: $value;
+    border-radius: $value;
+  }
+  @else {
+    -webkit-border-top-#{$pos}-radius: $value;
+    -moz-border-top-#{$pos}-radius: $value;
+    -ms-border-top-#{$pos}-radius: $value;
+    -o-border-top-#{$pos}-radius: $value;
+    border-top-#{$pos}-radius: $value;
+    -webkit-border-bottom-#{$pos}-radius: $value;
+    -moz-border-bottom-#{$pos}-radius: $value;
+    -ms-border-bottom-#{$pos}-radius: $value;
+    -o-border-bottom-#{$pos}-radius: $value;
+    border-bottom-#{$pos}-radius: $value;
+  }
+}
+@mixin boxshadow($a){
+  -webkit-box-shadow: $a;
+      -moz-box-shadow: $a;
+        -ms-box-shadow: $a;
+          -o-box-shadow: $a;
+              box-shadow: $a;
+}
+
+@mixin boxsizing($a) {
+  -webkit-box-sizing: $a;
+  -moz-box-sizing: $a;
+  -ms-box-sizing: $a;
+  -o-box-sizing: $a;
+  box-sizing: $a;
+}
+@mixin pos($top:auto, $right:auto, $bottom: auto, $left: auto){
+  position:absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $bottom;
+}
+@mixin css3($property, $value){
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}#{$property}:$value;
+  }
+}
+@mixin clearfix(){
+  &:after, :before{
+    content: '';
+    display:table;
+  }
+  &:after{
+    clear:both;
+  }
+}
+$width-small:  320px;
+$width-medium: 480px;
+$width-large:  640px;
+@mixin responsive($width) {
+  @if $width == $width-large {
+    @media screen and (min-width: $width-large){ @content; }
+  }
+  @else if $width == $width-medium {
+    @media only screen and (max-width: $width-large) and (min-width: $width-medium){ @content; }
+  }
+  @else if $width == $width-small {
+    @media only screen and (max-width: $width-small) { @content; }
+  }
+}

@@ -1,0 +1,498 @@
+/* line 4, ../../sass/activitys/base.scss */
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 625%;
+  overflow: hidden;
+}
+@media screen and (min-width: 640px) {
+  /* line 4, ../../sass/activitys/base.scss */
+  html {
+    font-size: 1200%;
+  }
+}
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+  /* line 4, ../../sass/activitys/base.scss */
+  html {
+    font-size: 900%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 4, ../../sass/activitys/base.scss */
+  html {
+    font-size: 625%;
+  }
+}
+
+/* line 22, ../../sass/activitys/base.scss */
+body {
+  font-family: Microsoft YaHei, "微软雅黑", Verdana, Geneva, sans-serif;
+  margin: 0;
+  font-size: .14rem;
+  line-height: 1.5;
+  color: #333333;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: box;
+  background: #930202;
+}
+
+/* line 36, ../../sass/activitys/base.scss */
+li {
+  list-style: none;
+}
+
+/* line 37, ../../sass/activitys/base.scss */
+h1, h2, h3, h4, h5, h6, div, p, dl, dd, dt, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* line 39, ../../sass/activitys/base.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 42, ../../sass/activitys/base.scss */
+em, strong, b, i {
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 43, ../../sass/activitys/base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+/* line 44, ../../sass/activitys/base.scss */
+input[type=number] {
+  -webkit-appearance: none;
+}
+/* line 45, ../../sass/activitys/base.scss */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* line 48, ../../sass/activitys/base.scss */
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* line 53, ../../sass/activitys/base.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 57, ../../sass/activitys/base.scss */
+img {
+  vertical-align: middle;
+  border: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 63, ../../sass/activitys/base.scss */
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #333;
+}
+
+/* line 69, ../../sass/activitys/base.scss */
+input {
+  outline: none;
+}
+/* line 71, ../../sass/activitys/base.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 75, ../../sass/activitys/base.scss */
+.hide {
+  display: none;
+}
+
+/* line 78, ../../sass/activitys/base.scss */
+.indent {
+  text-indent: 2em;
+}
+
+/* line 81, ../../sass/activitys/base.scss */
+body > article {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+/* line 102, ../../sass/activitys/base.scss */
+.loading {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.2), 7px 7px 0 0 rgba(0, 0, 0, 0.3), 0 10px 0 0 rgba(0, 0, 0, 0.4), -7px 7px 0 0 rgba(0, 0, 0, 0.5), -10px 0px 0 0 rgba(0, 0, 0, 0.6), -7px -7px 0 0 rgba(0, 0, 0, 0.7), 0 -10px 0 0 rgba(0, 0, 0, 0.8), 7px -7px 0 0 rgba(0, 0, 0, 0.9);
+  -webkit-animation-name: loading;
+  -moz-animation-name: loading;
+  -ms-animation-name: loading;
+  -o-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* v1.7 */
+.toptit {
+  line-height: 0.5rem;
+  background-color: #dd171b;
+  text-align: center;
+  font-size: 0.23rem;
+  color: #fff;
+  border-bottom: 1px solid #ad4156;
+}
+.tab_box{
+  margin: 0.16rem;
+  margin-top: -0.3rem;
+  z-index: 9999;
+  position: relative;;
+}
+.tab_box .tabbar{
+  position: relative;
+  height: 60px;
+}
+.tab_box .tabbar .tab_bg{
+  /*width:50%;*/
+  position: absolute; 
+  left: 0;
+}
+.tab_box .tabbar .tab_1{
+  width:50%;
+  height: 50px;
+  z-index: 999;
+  position: absolute; 
+  left: 0;
+}
+.tab_box .tabbar .tab_2{
+  width:50%;
+  height: 50px;
+  z-index: 999;
+  position: absolute; 
+  right: 0;
+}
+
+.tab_box .tabcon .con_1 .recharge-rule{
+  background-color: #760000;
+  color: #ffcd9f;
+  font-size: 0.12rem;
+  padding: 0.1rem;
+}
+.tab_box .tabcon .con_1 .recharge-rule p{
+  margin-bottom: 10px;
+}
+.tab_box .tabcon .con_1 .success-tips{
+  color: #ffcd9f;
+  font-size: 0.14rem;
+  text-align: center;
+  margin-top: 0.05rem;
+}
+.tab_box .tabcon .con_1 .success-tips-ios{
+  color: #ffcd9f;
+  font-size: 0.18rem;
+  text-align: center;
+  margin: 0.15rem 0 0.25rem ;
+}
+.btn_ljcy:link,.btn_ljcy:visited{
+  margin:15px auto 28px;
+  display: block;
+  width: 150px;
+  height: 36px;
+  text-align: center;
+  color: #670000;
+  font:bold 0.18rem/34px '';
+  background: url('../../images/activitys/v1_7/btn_ljcy.png') no-repeat;
+}
+.btn_ljcy:focus,.btn_ljcy:active{
+  display: block;
+  width: 150px;
+  height: 36px;
+  color: #670000;
+  font:bold 0.18rem/34px '';
+  background: url('../../images/activitys/v1_7/btn_ljcy_press.png') no-repeat;
+}
+.btn_ljcy_gray:link{
+  margin:15px auto 28px;
+  display: block;
+  width: 150px;
+  height: 36px;
+  color: #333;
+  font:bold 0.18rem/34px '';
+  text-align: center;
+  background: url('../../images/activitys/v1_7/btn_ljcy_gray.png') no-repeat;
+}
+.btn_ljcy.disabled{
+    background: url('../../images/activitys/v1_7/btn_ljcy-disabled.png') no-repeat;
+    color:#ccc;
+}
+/*分享有礼 tab*/
+.show-base-reword {
+  height: .24rem;
+  line-height: .24rem;
+  text-align: center;
+  color: #ffcd9f;
+  font-size: 0.13rem;
+}
+
+/* line 38, ../../sass/activitys/reword.scss */
+
+/* line 40, ../../sass/activitys/reword.scss */
+.reword-status {
+  margin-top: .2rem;
+  /* 已领取 */
+  /* 可以领取 */
+}
+.reword-status > div {
+  margin-top: .25rem;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -o-box-align: center;
+  box-align: center;
+  /* 已领取 */
+  /* 可以领取 */
+}
+/* line 45, ../../sass/activitys/reword.scss */
+.reword-status > div:nth-of-type(1) {
+  margin-top: .1rem;
+}
+/* line 48, ../../sass/activitys/reword.scss */
+.reword-status > div:nth-of-type(1):nth-of-type(1) .show-status span:nth-of-type(2) {
+  display: none;
+}
+/* line 53, ../../sass/activitys/reword.scss */
+.reword-status > div .show-people {
+  width: 20%;
+  font-size: .16rem;
+  text-align: right;
+  color: #ffcd9f;
+}
+/* line 58, ../../sass/activitys/reword.scss */
+.reword-status > div .show-people span {
+  font-size: .18rem;
+}
+/* line 62, ../../sass/activitys/reword.scss */
+.reword-status > div .show-status {
+  width: 12%;
+  height: .2rem;
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -o-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  -o-box-pack: center;
+  box-pack: center;
+}
+/* line 71, ../../sass/activitys/reword.scss */
+.reword-status > div .show-status span:nth-of-type(1) {
+  display: inline-block;
+  width: .17rem;
+  height: .17rem;
+  border-radius: 50%;
+  background: #e28021;
+}
+/* line 78, ../../sass/activitys/reword.scss */
+.reword-status > div .show-status span:nth-of-type(2) {
+  display: inline-block;
+  width: .05rem;
+  height: .45rem;
+  margin: 0 -0.025rem;
+  background: #e28021;
+  position: absolute;
+  left: 50%;
+  top: -.36rem;
+}
+/* line 87, ../../sass/activitys/reword.scss */
+.reword-status > div .show-status span:nth-of-type(2) i {
+  display: inline-block;
+  width: .1rem;
+  height: .1rem;
+  margin-left: -.026rem;
+  border-radius: 50%;
+  background: #e28021;
+  margin-top: .14rem;
+}
+/* line 98, ../../sass/activitys/reword.scss */
+.reword-status > div .show-msg {
+  width: 35%;
+  height: .24rem;
+  line-height: .22rem;
+  text-align: center;
+  border-radius: 5px;
+  background: #fcb14b;
+  color: #4a0c11;
+  position: relative;
+  font-size: 0.14rem;
+}
+/* line 107, ../../sass/activitys/reword.scss */
+.reword-status > div .show-msg .this {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: .05rem;
+  border-style: solid;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: #ffb202;
+  margin: .06rem 0 auto -.09rem;
+  position: absolute;
+}
+/* line 120, ../../sass/activitys/reword.scss */
+.reword-status > div .show-msg .c-red {
+  color: #ef2642;
+  font-size: .16rem;
+}
+/* line 125, ../../sass/activitys/reword.scss */
+.reword-status > div .take-status {
+  width: 30%;
+  text-align: center;
+  font-size: .16rem;
+}
+/* line 129, ../../sass/activitys/reword.scss */
+.reword-status > div .take-status a {
+  display: inline-block;
+  height: .24rem;
+  line-height: .24rem;
+  color: #fdc58a;
+}
+/* line 138, ../../sass/activitys/reword.scss */
+.reword-status > div.light .show-status span:nth-of-type(1) {
+  background: #fffd70;
+}
+/* line 141, ../../sass/activitys/reword.scss */
+.reword-status > div.light .show-status span:nth-of-type(2) {
+  background: #fffd70;
+}
+/* line 143, ../../sass/activitys/reword.scss */
+.reword-status > div.light .show-status span:nth-of-type(2) i {
+  background: #fffd70;
+}
+/* line 147, ../../sass/activitys/reword.scss */
+.reword-status > div.light .take-status a {
+  color: #fdc58a;
+}
+.reword-status > div.can-take.disabled .take-status a {
+    color: #ccc;
+    background: #ddd;
+    animation:none;
+    -webkit-animation: none;
+}
+/* line 154, ../../sass/activitys/reword.scss */
+.reword-status > div.can-take .show-status span:nth-of-type(1) {
+  background: #fffd70;
+}
+/* line 157, ../../sass/activitys/reword.scss */
+.reword-status > div.can-take .show-status span:nth-of-type(2) {
+  background: #fffd70;
+}
+/* line 159, ../../sass/activitys/reword.scss */
+.reword-status > div.can-take .show-status span:nth-of-type(2) i {
+  background: #fffd70;
+}
+/* line 163, ../../sass/activitys/reword.scss */
+@-webkit-keyframes btn_lq /* Safari and Chrome */
+{
+  0%{-webkit-transform: scale(1,1);}
+  25%{-webkit-transform: scale(1.1,1.1);}
+  50%{-webkit-transform: scale(1,1);}
+  75%{-webkit-transform: scale(1.1,1.1);}
+  100%{-webkit-transform: scale(1,1);}
+
+}
+.reword-status > div.can-take .take-status a {
+  padding: 0 .04rem;
+  border-radius: 5px;
+  color: #560400;
+  background: -webkit-linear-gradient(top,#faeb92,#ec8d03); 
+ /* -webkit-animation:btn_lq 1s infinite linear ;*/
+}
+.tab_box .tabcon .con_2 .recharge-rule2{
+  background-color: #760000;
+  color: #ffcd9f;
+  font-size: 0.12rem;
+  padding: 0.1rem;
+  margin-top: 0.35rem;
+}
+.tab_box .tabcon .con_2 .recharge-rule2 p{
+  margin-bottom: 10px;
+}
+.tab_box .tabcon .con_2 .recharge-rule2 .redbagtit{
+  color: #ffcd9f;
+  font-size: 0.14rem;
+}
+.tab_box .tabcon .con_2 .recharge-rule2 .redbagtit span{
+  width: 48%;
+  color: #ffcd9f;
+  font-size: 0.12rem;
+  text-align: center;
+  display: inline-block;
+  text-align:center;
+}
+
+
+
+
+

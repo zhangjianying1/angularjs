@@ -1,0 +1,504 @@
+/* line 4, ../sass/activity.scss */
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 625%;
+  overflow: hidden;
+}
+@media screen and (min-width: 640px) {
+  /* line 4, ../sass/activity.scss */
+  html {
+    font-size: 1200%;
+  }
+}
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+  /* line 4, ../sass/activity.scss */
+  html {
+    font-size: 900%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 4, ../sass/activity.scss */
+  html {
+    font-size: 625%;
+  }
+}
+
+/* line 22, ../sass/activity.scss */
+body {
+  font-family: Microsoft YaHei, "微软雅黑", Verdana, Geneva, sans-serif;
+  margin: 0;
+  font-size: .14rem;
+  line-height: 1.5;
+  color: #333333;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: box;
+  background: #f9eacd;
+}
+
+/* line 36, ../sass/activity.scss */
+li {
+  list-style: none;
+}
+
+/* line 37, ../sass/activity.scss */
+h1, h2, h3, h4, h5, h6, div, p, dl, dd, dt, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* line 39, ../sass/activity.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 42, ../sass/activity.scss */
+em, strong, b, i {
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 43, ../sass/activity.scss */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 44, ../sass/activity.scss */
+input[type=number] {
+  -webkit-appearance: none;
+}
+/* line 45, ../sass/activity.scss */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* line 48, ../sass/activity.scss */
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* line 53, ../sass/activity.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 57, ../sass/activity.scss */
+img {
+  vertical-align: middle;
+  border: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 63, ../sass/activity.scss */
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #333;
+}
+
+/* line 69, ../sass/activity.scss */
+.react {
+  color: inherit;
+  height: 100%;
+  display: block;
+}
+
+/* line 74, ../sass/activity.scss */
+.react:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* line 77, ../sass/activity.scss */
+.w {
+  padding: 0 .1rem;
+}
+
+/* line 80, ../sass/activity.scss */
+.hide {
+  display: none;
+}
+
+/* line 83, ../sass/activity.scss */
+.indent {
+  text-indent: 2em;
+}
+
+/* line 86, ../sass/activity.scss */
+body > article {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 95, ../sass/activity.scss */
+.register {
+  width: 80%;
+  min-height: 1.3rem;
+  padding: .1rem;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* line 107, ../sass/activity.scss */
+.loading {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.2), 7px 7px 0 0 rgba(0, 0, 0, 0.3), 0 10px 0 0 rgba(0, 0, 0, 0.4), -7px 7px 0 0 rgba(0, 0, 0, 0.5), -10px 0px 0 0 rgba(0, 0, 0, 0.6), -7px -7px 0 0 rgba(0, 0, 0, 0.7), 0 -10px 0 0 rgba(0, 0, 0, 0.8), 7px -7px 0 0 rgba(0, 0, 0, 0.9);
+  -webkit-animation-name: loading;
+  -moz-animation-name: loading;
+  -ms-animation-name: loading;
+  -o-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 错误提示层 */
+/* line 147, ../sass/activity.scss */
+.error-layer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: -.6rem;
+  left: 0;
+  z-index: 99999999;
+  opacity: 0;
+  -webkit-transition: all ease-out 0.1s;
+  -moz-transition: all ease-out 0.1s;
+  -ms-transition: all ease-out 0.1s;
+  -o-transition: all ease-out 0.1s;
+  transition: all ease-out 0.1s;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+}
+/* line 157, ../sass/activity.scss */
+.error-layer.show {
+  bottom: 20%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* line 162, ../sass/activity.scss */
+.error-layer span {
+  min-height: .4rem;
+  min-width: .8rem;
+  padding: 0 .2rem;
+  line-height: .4rem;
+  font-size: .16rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* line 175, ../sass/activity.scss */
+.certificate {
+  width: 100%;
+  position: relative;
+}
+/* line 178, ../sass/activity.scss */
+.certificate .show-msg {
+  width: 70%;
+  position: absolute;
+  left: 15%;
+  top: 33%;
+}
+/* line 183, ../sass/activity.scss */
+.certificate .show-msg strong {
+  font-size: .14rem;
+  color: #177edd;
+}
+/* line 187, ../sass/activity.scss */
+.certificate .show-msg p {
+  padding: 4% 0;
+  color: #000;
+}
+/* line 191, ../sass/activity.scss */
+.certificate .show-msg .figure {
+  padding-right: 22%;
+  text-align: right;
+  color: #dd171b;
+}
+/* line 195, ../sass/activity.scss */
+.certificate .show-msg .figure em {
+  font-size: .2rem;
+}
+/* line 198, ../sass/activity.scss */
+.certificate .show-msg .figure span {
+  padding-left: .1rem;
+}
+/* line 202, ../sass/activity.scss */
+.certificate .show-msg .show-time {
+  padding-top: 2%;
+  font-size: .1rem;
+  color: #666;
+  text-align: right;
+}
+
+/* line 210, ../sass/activity.scss */
+.receive {
+  padding-top: 6%;
+  text-align: center;
+}
+/* line 213, ../sass/activity.scss */
+.receive p {
+  line-height: .38rem;
+  color: #b47025;
+  font-size: .16rem;
+}
+/* line 218, ../sass/activity.scss */
+.receive .receive-btn {
+  display: inline-block;
+  min-width: 76%;
+  max-width: 80%;
+  height: .4rem;
+  border-bottom: 3px solid #e3472d;
+  margin: 0 auto;
+  line-height: .4rem;
+  color: #fff;
+  font-size: .18rem;
+  background: #ff755e;
+  border-radius: 5px;
+}
+
+/* line 232, ../sass/activity.scss */
+.follow {
+  min-height: .6rem;
+  padding-top: 6%;
+  background-size: cover;
+  position: relative;
+}
+/* line 237, ../sass/activity.scss */
+.follow .code-box {
+  width: 18%;
+  margin-left: -9%;
+  position: absolute;
+  left: 50%;
+  top: 41%;
+}
+/* line 243, ../sass/activity.scss */
+.follow .code-box .tips {
+  display: inline-block;
+  width: .9rem;
+  height: .2rem;
+  padding: 0 .1rem;
+  line-height: .2rem;
+  border-radius: 8px;
+  background: #ff544a;
+  color: #fff;
+  font-size: .1rem;
+  position: absolute;
+  left: 110%;
+  top: -30%;
+}
+/* line 256, ../sass/activity.scss */
+.follow .code-box .tips i {
+  display: block;
+  width: .2rem;
+  height: .13rem;
+  background: url(../images/activitys/this.png);
+  background-size: cover;
+  position: absolute;
+  left: .05rem;
+  top: .19rem;
+}
+
+/* line 269, ../sass/activity.scss */
+.language {
+  color: #fff;
+  background: #f2be8c;
+  text-align: center;
+}
+/* line 273, ../sass/activity.scss */
+.language .language-model {
+  position: relative;
+  width: 76%;
+  height: .67rem;
+  padding: .15rem 4%;
+  margin: -2% auto 0 auto;
+  background: #efae70;
+  border-radius: 6px;
+}
+/* line 282, ../sass/activity.scss */
+.language .lang-bottom {
+  line-height: .6rem;
+}
+
+/* 领取奖励 */
+/* line 287, ../sass/activity.scss */
+#layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* line 300, ../sass/activity.scss */
+#iosLayer {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 9999;
+}
+/* line 311, ../sass/activity.scss */
+#iosLayer img {
+  width: 60%;
+}
+
+/* line 315, ../sass/activity.scss */
+.register {
+  width: 3.16rem;
+  height: 4.04rem;
+  padding: 2.1rem .65rem 0 .65rem;
+  background: url(../images/activitys/layer-bg.png);
+  background-size: cover;
+  font-size: .14rem;
+}
+/* line 322, ../sass/activity.scss */
+.register input {
+  padding-left: .1rem;
+  border: none;
+  font-size: .14rem;
+  outline: none;
+  color: #fff;
+}
+/* line 328, ../sass/activity.scss */
+.register input::-webkit-input-placeholder {
+  color: #fff;
+}
+/* line 333, ../sass/activity.scss */
+.register .tag-phone input {
+  width: 1.7rem;
+  height: .29rem;
+  padding: .04rem .08rem .04rem;
+  margin-left: .02rem;
+  line-height: .21rem;
+  background: url(../images/activitys/input-tele.png) no-repeat 0px 0;
+  background-size: cover;
+}
+/* line 342, ../sass/activity.scss */
+.register .tag-code {
+  margin-top: .1rem;
+}
+/* line 344, ../sass/activity.scss */
+.register .tag-code input {
+  width: .96rem;
+  height: .29rem;
+  padding: .04rem .08rem .04rem;
+  line-height: .21rem;
+  background: url(../images/activitys/input-code.png);
+  background-size: cover;
+}
+/* line 352, ../sass/activity.scss */
+.register .tag-code .send-btn {
+  width: .77rem;
+  height: .29rem;
+  margin-left: .06rem;
+  line-height: .29rem;
+  text-align: center;
+  color: #fff;
+  background: url(../images/activitys/send-btn.png);
+  background-size: cover;
+  position: absolute;
+}
+/* line 362, ../sass/activity.scss */
+.register .tag-code .send-btn.disabled {
+  color: #ccc;
+}
+/* line 367, ../sass/activity.scss */
+.register .error-tips {
+  height: .38rem;
+  padding-top: .18rem;
+  line-height: .2rem;
+  text-align: center;
+  color: #ac3d32;
+}
+/* line 374, ../sass/activity.scss */
+.register .sub-box {
+  text-align: center;
+}
+/* line 376, ../sass/activity.scss */
+.register .sub-box .sub-form {
+  width: .99rem;
+  height: .3rem;
+  line-height: .28rem;
+  text-align: center;
+  font-size: .14rem;
+  color: #ad3d33;
+  background: url(../images/activitys/sub-btn.png);
+  background-size: cover;
+}
+/* line 385, ../sass/activity.scss */
+.register .sub-box .sub-form[disabled] {
+  color: #ccc;
+}

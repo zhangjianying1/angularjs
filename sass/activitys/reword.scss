@@ -1,0 +1,220 @@
+@import "base";
+body{
+  background:#063e6d;
+}
+.share-box{
+  margin: .3rem 0 .12rem;
+  text-align:center;
+  a{
+    display:inline-block;
+    height:  .32rem;
+    padding:0 .04rem;
+    line-height: .32rem;
+    border-radius: .05rem;
+    box-shadow:2px 2px 0px #042a49;
+    background:#ef2642;
+    text-align:center;
+    font-size: .16rem;
+    color:#fff;
+    i{
+      display:inline-block;
+      width: .25rem;
+      height: .19rem;
+      vertical-align: middle;
+      background:url(../../images/activitys/reword-share-btn.png);
+      background-size:cover;
+      border:1px solild #f90;
+    }
+  }
+}
+.show-base-reword{
+  height:.24rem;
+  border-top:1px solid #0e528c;
+  border-bottom:1px solid #0e528c;
+  line-height:.24rem;
+  text-align:center;
+  color:#ef2642;
+  em{
+  color:#ffb202;
+  }
+}
+//.reword-status{
+//  border-top:1px solid #032440;
+//  &>div{
+//    margin-top: .35rem;
+//    display:-webkit-box;
+//    display:box;
+//    @include css3(box-align, center);
+//    &:nth-of-type(1){
+//      margin-top: .1rem;
+//      &:nth-of-type(1){
+//        .show-status span:nth-of-type(2) {
+//          display:none;
+//        }
+//      }
+//    }
+//    .show-people{
+//      width:18%;
+//      font-size: .14rem;
+//      text-align:right;
+//      color:#00ff00;
+//      span{
+//        font-size: .18rem;
+//      }
+//    }
+//    .show-status{
+//      width:12%;
+//      height: .2rem;
+//      text-align:center;
+//      position:relative;
+//      display:-webkit-box;
+//      display:box;
+//      white-space:nowrap;
+//      @include css3(box-align, center);
+//      @include css3(box-pack, center);
+//      span:nth-of-type(1) {
+//        display:inline-block;
+//        width: .17rem;
+//        height: .17rem;
+//        border-radius:50%;
+//        background:#039103;
+//      }
+//      span:nth-of-type(2) {
+//        display:inline-block;
+//        width: .05rem;
+//        height: .45rem;
+//        margin: 0 -0.025rem;
+//        background:#039103;
+//        position:absolute;
+//        left:50%;
+//        top: -.45rem;
+//        i{
+//          display:inline-block;
+//          width: .1rem;
+//          height: .1rem;
+//          margin-left:-.026rem;
+//          border-radius:50%;
+//          background:#039103;
+//          margin-top:.16rem;
+//        }
+//      }
+//    }
+//    .show-msg{
+//      width:34%;
+//      height: .24rem;
+//      line-height: .24rem;
+//      text-align:center;
+//      border-radius:5px;
+//      background:#ffb202;
+//      color:#063e6d;
+//      position:relative;
+//      .this{
+//        display:block;
+//        width:0;
+//        height:0;
+//        border-width: .05rem;
+//        border-style:solid;
+//        border-left-color:transparent;
+//        border-top-color:transparent;
+//        border-bottom-color:transparent;
+//        border-right-color:#ffb202;
+//        margin:.06rem 0 auto -.09rem;
+//        position:absolute;
+//      }
+//      .c-red{
+//        color:#ef2642;
+//        font-size:.16rem;
+//      }
+//    }
+//    .take-status{
+//      width:26%;
+//      text-align:center;
+//      font-size: .16rem;
+//      a{
+//        display:inline-block;
+//        height:.24rem;
+//        line-height:.24rem;
+//        color:#ffb202;
+//      }
+//    }
+//    /* 已领取 */
+//    &.light{
+//      .show-status span:nth-of-type(1){
+//        background:#00ff00;
+//      }
+//      .show-status span:nth-of-type(2) {
+//        background:#00ff00;
+//        i{
+//          background:#00ff00;
+//        }
+//      }
+//      .take-status a{
+//        color:#29abe2;
+//      }
+//
+//    }
+//    /* 可以领取 */
+//    &.can-take{
+//      .show-status span:nth-of-type(1){
+//        background:#00ff00;
+//      }
+//      .show-status span:nth-of-type(2) {
+//        background:#00ff00;
+//        i{
+//          background:#00ff00;
+//        }
+//      }
+//      .take-status a{
+//        padding:0 .04rem;
+//        border-radius:5px;
+//        background:#ef2642;
+//        color:#fff;
+//        @include css3(animation-name, scale);
+//        @include css3(animation-duration, 1.4s);
+//        @include css3(animation-iteration-count, infinite);
+//        @include css3(animation-timing-function, linear);
+//        @include css3(animation-fill-mode, backwards);
+//      }
+//
+//    }
+//  }
+//  &div:nth-of-type(1){
+//    .show-status span{
+//    }
+//  }
+//}
+.reword-rule{
+  padding: .2rem .1rem .1rem;
+  border-top:1px solid #032440;
+  color:#00ff00;
+  dt{
+    font-size: .15rem;
+  }
+  dd{
+    margin-top: .1rem;
+    font-size: .12rem;
+    line-height: .16rem;
+  }
+}
+@keyframes scale{
+  0%{
+    @include css3(transform, scale(1));
+  }
+  50%{
+    @include css3(transform, scale(1.1));
+  }
+  100%{
+    @include css3(transform, scale(1));
+  }
+}
+@-webkit-keyframes scale{
+  0%{
+    @include css3(transform, scale(1));
+  }
+  50%{
+    @include css3(transform, scale(1.1));
+  }
+  100%{
+    @include css3(transform, scale(1));
+  }
+}
