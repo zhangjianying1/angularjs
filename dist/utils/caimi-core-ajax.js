@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(["jquery","utils/caimi-core-islogin","utils/caimi-version"],function(a,b,c){var d=!0,e={};e=b.getData();var f=function(b,c,e){d?a.getJSON(b,c,function(a){e(a)}):a.ajax({type:"post",data:c,url:b,dataType:"json"}).done(function(a){e(a)}).fail(function(){alert("加载失败")})};return{post:f,version:c,loginStatus:e}});

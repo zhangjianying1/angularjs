@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>充50得80</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../stylesheets/activitys/activity_v1_7.css" />
+	<link rel="stylesheet" href="../../stylesheets/activitys/base.css" />
+    <script data-main="../../js/main" src="../../dist/require.min.js"></script>
+
+</head>
+<body ng-controller="exchargeCtrl">
+<loading data="../../images/activitys/v1_7/recharge50_banner_ios.png"></loading>
+<article img>
+    <section>
+        <img src="../../images/activitys/v1_7/recharge50_banner_ios.png">
+
+    </section>
+    <section class="tab_box" id="tab">
+
+        <div class="tabcon">
+            <ul class="con_1">
+                <a class="btn_ljcy" href="javascript:void(0)" ng-bind="tips.btnText" ng-class="{disabled: tips.disabled }" ng-click="toExcharge()">我要兑换</a>
+                <div class="success-tips-ios success-tips" ng-show="tips.iphoneBtn" ng-bind="tips.text"></div>
+                <div class="recharge-rule">
+                    <div style="position:relative; bottom:15px;"><img src="../../images/activitys/v1_7/con_1_tit.png" alt=""></div>
+                    <p>1.自2015年1月22日 00:00:00起，您可以花费50元充值金，兑换80元红包，红包一次性到账，兑换限每人一次；</p>
+                    <p>2.活动时间为2015年1月22日 00:00:00至2015年2月28日 23:59:59；</p>
+                    <p>3.活动结束后，将无法兑换红包奖励；</p>
+                    <p>4.红包仅能用于购彩，无法提现；</p>
+                    <p>5.在法律允许的范围内，彩米彩票保留此活动的最终解释权；</p>
+                </div>
+
+
+            </ul>
+
+        </div>
+
+
+    </section>
+
+</article>
+
+</body>
+</html>

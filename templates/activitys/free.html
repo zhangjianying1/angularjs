@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>中奖炫出来</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="../../stylesheets/activitys/activity.css" />
+    <script data-main="../../js/main" src="../../dist/require.min.js"></script>
+
+
+</head>
+
+<body ng-controller="registerCtrl">
+
+<loading ng-show="!data.rightShow"></loading>
+
+<article class="" >
+    <section>
+        <div class="certificate">
+            <img ng-src="../../images/activitys/certificate.jpg?333444" />
+            <div class="show-msg">
+                <strong>${share.userName}:</strong>
+                <p>恭喜您，您购买的${share.lotteryName}喜中</p>
+                <div class="figure"><em>${share.bonusAmount}</em><span>元奖金</span></div>
+                <div class="show-time">
+                    <div>特此表彰，以资鼓励！</div>
+                    <time>${share.bonusTime}</time>
+                </div>
+            </div>
+        </div>
+        <div class="receive" >
+            <p ng-show="data.rightShow" ng-bind-html="data.rightTips | trustHtml"></p>
+            <div class="join-box">
+                <a href="javascript:void(0)" class="receive-btn" id="take" ng-bind="data.btnText" ng-click="toShow($event)"></a></div>
+            <div class="activity-msg">
+                <dl>
+                    <dt>客户端活动：</dt>
+                    <dd ng-bind-html="data.versionTips | trustHtml"> </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="follow">
+            <img src="../../images/activitys/bottom-ban.gif" />
+        </div>
+    </section>
+</article>
+<register imgsrc="../../images/activitys/layer-bg.png"  ng-click="toHide($event)" bBtn="data.btnText"></register>
+<input type="hidden" name="pid"  value="${share.pid}"/>
+<input type="hidden" name="shareUserId"  value="${share.shareUserId}"/>
+
+</body>
+
+</html>

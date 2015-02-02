@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>手机号注册</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/login.css" />
+    <script data-main="/js/app.js" src="/js/require.min.js"></script>
+</head>
+<body>
+<section>
+    <header>
+        <a href="#" class="react on-left"><span class="back"></span></a>
+        <span>注册ff</span>
+        <a href="" class="on-right"></a>
+    </header>
+    <article >
+        <section class="activity-register">
+            <form action="http://192.168.0.254:9090/userController/userNameRegister" method="post" id="registUser">
+                <div class="input-tag tag-phone"><input type="text" placeholder="输入用户名" maxlength="11" name="userName" /><em class="clean hide" clean></em></div>
+                <div class="input-tag tag-code"><input type="text" placeholder="输入密码" maxlength="6" value="" name="password" /><em class="clean hide" clean></em></div>
+                <div class="mt20">
+                    <input type="submit" value="确定" class="btn btn-confirm" />
+                </div>
+            </form>
+
+        </section>
+    </article>
+
+</section>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>

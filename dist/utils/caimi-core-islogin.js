@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(function(){var a={getData:function(){var a,b,c,d;a=document.location.search.substring(1),a&&(b=a.split("&"),c=[],d={},$.each(b,function(a){c=b[a].split("="),d[c[0]]=c[1]}));try{}catch(e){}return d}};return a});

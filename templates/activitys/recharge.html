@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html ng-app="excharge">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>充50得80</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../stylesheets/activitys/activity_v1_7.css" />
+	<link rel="stylesheet" href="../../stylesheets/activitys/base.css" />
+    <script data-main="../../js/main" src="../../dist/require.min.js"></script>
+</head>
+<body ng-controller="exchargeCtrl">
+    <loading></loading>
+	<article ng-show="true">
+		<section>
+			<img src="../../images/activitys/v1_7/recharge50_banner.png">
+        </section>
+		<section class="tab_box" id="tab" ng-controller="tab">
+			<div class="tabbar">
+				
+				<span class="tab_1" ng-click="tab()"></span>
+				<span class="tab_2" ng-click="tab()"></span>
+				
+				<img class="tab_bg"  src="../../images/activitys/v1_7/tab_1.png" ng-show="tabBtns" >
+				<img class="tab_bg"  src="../../images/activitys/v1_7/tab_2.png" ng-show="tabBtns2" >
+			</div>
+			<div class="tabcon" >
+				<ul class="con_1" ng-show="tabBtns" >
+					<div class="recharge-rule">
+						<div style="position:relative; bottom:15px;"><img src="../../images/activitys/v1_7/con_1_tit.png" alt=""></div>
+						<p>1.自2015年1月22日 00:00:00起，您可以花费50元充值金，兑换80元红包，红包一次性到账，兑换限每人一次；</p>
+						<p>2.活动时间为2015年1月22日 00:00:00至2015年2月28日 23:59:59；</p>
+						<p>3.活动结束后，将无法兑换红包奖励；</p>
+                        <p>4.分享活动赢取最高171.5元的分享奖励，现仅限安卓手机用户参与；</p>
+						<p>5.红包仅能用于购彩，无法提现；</p>
+						<p>6.在法律允许的范围内，彩米彩票保留此活动的最终解释权；</p>
+					</div>
+
+                    <div class="success-tips" ng-show="true" ><span ng-bind-html="tips.text|trustHtml"></span></div>
+                    <a class="btn_ljcy" href="#" ng-class="{disabled: tips.disabled }" ng-click="toExcharge()" ng-bind="tips.btnText"></a>
+
+
+						
+                </ul>
+                <ul class="con_2" ng-show="tabBtns2" ng-controller="showStatus">
+                    <div class="show-base-reword"><p ng-bind-html="statusText | trustHtml"></p></div>
+                    <div class="recharge-rule2">
+                        <div style="position:relative; bottom:15px;"><img src="../../images/activitys/v1_7/con_2_tit_1.png" alt=""></div>
+                        <div><img src="../../images/activitys/v1_7/redbag.png" alt=""></div>
+                        <div class="redbagtit">
+                            <span>每邀请一位用户得3元</span>
+                            <span>邀请越多，奖励越多</span>
+                        </div>
+                    </div>
+                    <div class="reword-status">
+
+                        <div ng-class="{'can-take light': i.receiveStatus==1, 'light': i.receiveStatus==0, 'disabled': i.status==2}" ng-repeat="i in extraAwardList" >
+
+                            <div class="show-people"><span>{{ i.num }}</span>人</div>
+                            <div class="show-status">
+                                <span></span>
+                                <span><i></i></span>
+                            </div>
+                            <div class="show-msg">
+                                <i class="this"></i>
+                                额外奖励<em class="c-red">{{ i.amount }}元</em>
+                            </div>
+                            <div class="take-status">
+                                <a href="javascript:void(0)" ng-bind="i.text" ng-click="topartake($index)"></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="recharge-rule2">
+                        <div style="position:relative; bottom:15px;"><img src="../../images/activitys/v1_7/con_2_tit.png" alt=""></div>
+                        <p>1.点击右上角“分享”将活动分享至微信，通过您的分享，注册成为彩米的新用户并消费任意金额，您可获得每人3元的红包奖励；</p>
+                        <p>2.当邀请的新用户达到相应的人数后，还可以获得额外的分享奖励，具体细则见上表；</p>
+                        <p>3.最多可获得30人的分享奖励，奖励的最高金额为171.5元红包；</p>
+                        <p>4.奖励的红包将在领取后立即发放至您的账户，请注意查收；</p>
+                        <p>5.奖励领取的时间为：2015年1月22日 00:00:00至2015年2月28日 23:59:59；</p>
+                        <p>6.在法律允许的范围内，彩米彩票保留此活动的最终解释权；</p>
+                    </div>
+                </ul>
+			</div>
+        </section>
+
+	</article>
+    <layer></layer>
+
+    <script id="temcont" type="text/html">
+    {{ each extraAwardList as value index }}
+    {{ if (value.receiveStatus == 0 && value.status == 2)}}
+    <div class="can-take disabled">
+        <div class="show-people"><span>{{ value.num }}</span>人</div>
+        <div class="show-status">
+            <span></span>
+            <span><i></i></span>
+        </div>
+        <div class="show-msg">
+            <i class="this"></i>
+            额外奖励<em class="c-red">{{ value.amount }}元</em>
+        </div>
+        <div class="take-status">
+            <a href="javascript:void(0)" data-id="{{ value.shareExtraId }}">点击领取</a>
+        </div>
+    </div>
+    {{ /if }}
+    {{ if (value.receiveStatus == 0 && value.status != 2)}}
+    <div class="can-take">
+        <div class="show-people"><span>{{ value.num }}</span>人</div>
+        <div class="show-status">
+            <span></span>
+            <span><i></i></span>
+        </div>
+        <div class="show-msg">
+            <i class="this"></i>
+            额外奖励<em class="c-red">{{ value.amount }}元</em>
+        </div>
+        <div class="take-status">
+            <a href="javascript:void(0)" data-id="{{ value.shareExtraId }}">点击领取</a>
+        </div>
+    </div>
+    {{ /if }}
+    {{ if (value.receiveStatus == 1)}}
+    <div class="light">
+        <div class="show-people"><span>{{ value.num }}</span>人</div>
+        <div class="show-status">
+            <span></span>
+            <span><i></i></span>
+        </div>
+        <div class="show-msg">
+            <i class="this"></i>
+            额外奖励<em class="c-red">{{ value.amount }}元</em>
+        </div>
+        <div class="take-status">
+            <a href="javascript:void(0)" data-id="{{ value.shareExtraId }}">
+                已领取
+            </a>
+        </div>
+    </div>
+    {{ /if }}
+    {{ if (value.receiveStatus == 2)}}
+    <div >
+        <div class="show-people"><span>{{ value.num }}</span>人</div>
+        <div class="show-status">
+            <span></span>
+            <span><i></i></span>
+        </div>
+        <div class="show-msg">
+            <i class="this"></i>
+            额外奖励<em class="c-red">{{ value.amount }}元</em>
+        </div>
+        <div class="take-status">
+            <a href="javascript:void(0)" data-id="{{ value.shareExtraId }}">未完成</a>
+        </div>
+    </div>
+    {{ /if }}
+
+    {{ /each}}
+</script>
+</body>
+</html>

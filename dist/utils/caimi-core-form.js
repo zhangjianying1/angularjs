@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(function(){var a={cleanInput:function(a){a.clean.on("click",function(){console.log(3),a.input&&a.input.val("").focus(),a.callback&&a.callback.call(this)})},validator:function(){return{config:{},type:{},messages:[],objs:[],validate:function(a){var b,c,d,e;this.messages=[],this.objs=[];for(b in a)if(a.hasOwnProperty(b)){if(c=this.config[b],d=this.type[c],!c)continue;if(e=d.validate(a[b]),!e.bBtn)return e}return this.hasErrors()},hasErrors:function(){var a;for(a=0;a<this.messages.length;a++)return this.objs[a].focus(),!1}}}};return a}());

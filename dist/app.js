@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+require.config({baseUrl:"js/",paths:{jquery:"libs/jquery-1.9.1.min",zepto:"libs/zepto.min",template:"libs/template.min",recharge:"app/excharge-app",libs:"libs",ajax:"utils/caimi-core-ajax",islogin:"utils/caimi-core-islogin",test:"test"},shim:{zepto:{exports:"z"}},map:{recharge:{"app/excharge-app":"app/excharge-app.js?v=r3r3s2s"}},urlArgs:"v="+(new Date).getTime()}),require(["test2"],function(a){a.b()});

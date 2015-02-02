@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(["jquery"],function(){var a={data:{bBtn:!0},tab:function(b,c,d){b.each(function(b){$(this).on("touchend",function(){c.hide(),$(this).show().addClass("active"),c.hide(),c.eq(b).show(),d&&a.data.bBtn&&(a.data.bBtn=!1,d.call(this))})})}};return{tab:a.tab}});

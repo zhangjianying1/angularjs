@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(function(){var a={imgLoad:function(){function a(){c===h&&f.call(this)}for(var b=arguments[0],c=0,d=null,e="",f=arguments[1]||function(){},g=0,h=b.length;h>g;g++)e=b[g].getAttribute("_src"),d=new Image,d.src=e,d.complete&&(b[g].src=e,b[g].removeAttribute("_src"),c+=1,a()),d.onload=function(d,e){return function(){b[d].src=e,b[d].removeAttribute("_src"),c+=1,a()}}(g,e),d.onerror=function(){c+=1,a()}}};return a});

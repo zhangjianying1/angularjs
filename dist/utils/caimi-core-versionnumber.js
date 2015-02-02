@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(["utils/caimi-core-islogin","utils/caimi-version"],function(a,b){var c,d={iphone:0,android:0},e=a.getData(),f=b;return c=function(){var a,b=!1;if(e.softVer){a=parseFloat(e.softVer.substring(1));for(var c in f)a<d[c]&&(b=!0)}return b},{isLow:c,version:f,loginStatus:e}});

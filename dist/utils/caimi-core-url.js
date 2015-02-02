@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+var b=!0,str="http://192.168.0.253:8080";define({mobile:b?"/userController/mobileCode":"/json/login.json",joinExchange:b?"/taskController/joinExchange":"/json/login.json",activitylist:b?"/taskController/listExchange":"/json/login.json",awardDetail:b?"/share/awardDetail":"/json/login.json",receiveAward:b?"/share/receiveAward":"/json/login.json",register:b?"/userController/trackRegister":"/json/login.json"});

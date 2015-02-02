@@ -1,0 +1,2 @@
+/*! grunt 2015-01-26 */
+define(function(){var a=window.navigator.userAgent.toLowerCase();return function(){var b={};return a.indexOf("iphone")>-1&&(b.iphone=!0),a.indexOf("android")>-1&&(b.android=!0),a.indexOf("micromessenger")>-1&&(b.weixin=!0),b}()});

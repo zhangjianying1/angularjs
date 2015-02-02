@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>中奖炫出来，惊喜等你拿</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="../../stylesheets/activitys/reword.css?v1.76" />
+    <script data-main="../../js/main" src="../../dist/require.min.js"></script>
+
+
+</head>
+
+<body>
+
+<article ng-controller="rewordCtrl">
+    <section>
+        <img src="../../images/activitys/reword-ban.jpg" />
+        <div class="share-box">
+            <a href="icaimi:host:usercenter"><i></i>分享中奖方案</a>
+        </div>
+        <div class="show-base-reword" ><p ng-bind-html="statusText | trustHtml"></p></div>
+
+        <div class="reword-rule">
+            <dl>
+                <dt>活动规则：</dt>
+                <dd>1.	将中奖方案分享至微信，通过您的分享，注册成为彩米的新用户并消费任意金额，您可获得每人2元的红包奖励；</dd>
+                <dd>2.	奖励红包将自动发放至您的账户，多分享多得；</dd>
+                <dd>3.	奖励领取的时间为：2015年1月22日 00:00:00至2015年2月28日 23:59:59；</dd>
+                <dd>3.	在法律允许的范围内，彩米彩票保留此活动的最终解释权；</dd>
+            </dl>
+        </div>
+    </section>
+</article>
+
+
+</body>
+
+</html>
